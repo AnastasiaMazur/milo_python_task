@@ -27,10 +27,8 @@ def is_valid_date(year, month, day):
 
 
 def get_list_posible_variants(input_data):
-    posible_years = []
-
     # if in input data has four digits this is year
-    [posible_years.append(value) for value in input_data if len(value) == 4]
+    posible_years = [posible_years.append(value) for value in input_data if len(value) == 4]
 
     # if in input data doesnt has four digits, possible years is first or last digits
     if not len(posible_years):
@@ -62,9 +60,8 @@ def convert(input_string):
     input_data = input_string.split("/")
     list_posibile_variants = sorted(get_list_posible_variants(input_data))
     for date in list_posibile_variants:
-        year, month, day = date
-        if is_valid_date(year, month, day):
-            return "{}-{:02}-{:02}".format(year, month, day)
+        if is_valid_date(*date):
+            return "{}-{:02}-{:02}".format(*date)
     return "{} is illegal".format(input_string)
 
 
