@@ -5,10 +5,10 @@ Dec 31, 2999 (inclusive) using them as day, month and year (but not necessarily 
 
 Example:
 1/2/3 => 2001-2-3
-3/20/1 => 2001-3-20
 
 ### Prerequisites
 You need to have Python 3.5
+
 ## Versioning
 Using Python 3.5
 
